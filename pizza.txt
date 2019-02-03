@@ -156,3 +156,36 @@
 28,1090,Pecsi,Halas
 28,1490,Pecsi,Kívánság
 28,1490,Pecsi,Fele-fele
+28,800,Sziget,Csupa csoki
+28,800,sziget,Fehércsokis
+28,800,Sziget,Mogyorós
+28,1290,Sziget,Bohém
+28,990,Sziget,Bolognese
+28,1490,Sziget,Brutal
+28,990,Sziget,Chilis
+28,1190,Sziget,Csemege
+28,1090,Sziget,Fokhagymás-tejfölös
+28,1390,Sziget,Főnök
+28,1290,Sziget,Főtér
+28,990,Sziget,Hawaii
+28,990,Sziget,Hot dog
+28,1290,Sziget,Húsbomba
+28,1090,Sziget,Ínyenc
+28,990,Sziget,Kemencés
+28,990,Sziget,Kill Bill
+28,1490,Sziget,Kívánság pizza
+28,990,Sziget,Magyaros
+28,890,Sziget,Margaréta
+28,1190,Sziget,Mexikói
+28,1390,Sziget,Művház
+28,1290,Sziget,Napóleon
+28,1090,Sziget,Négy évszak
+28,1190,Sziget,Négy sajtos
+28,1290,Sziget,Pepperoni
+28,990,Sziget,Songoku
+28,890,Sziget,Sonkás
+28,1090,Sziget,Sonkás-szalámis
+28,990,Sziget,Szalámis
+28,990,Sziget,Sziget
+28,1290,Sziget,Tarajos
+28,1190,Sziget,Vega
