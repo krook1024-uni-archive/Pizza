@@ -48,7 +48,10 @@ DEFINE_int32(c, 0, "A legjobb N db pizza");
 
 void
 usage() {
-	std::cout << "Használat: ./pizza [-h(elp) -a(ll) -c(ount) [szám]]" << std::endl;
+	std::cout << "Használat: ./pizza vagy ./pizza [-a -h -c [szám]" << std::endl
+		<< "\t-a\t\tAz összes ajánlat kiiíratása" << std::endl
+		<< "\t-c N\t\tA legjobb N darab ajánlat kiíratása" << std::endl
+		<< "\t-a\t\tSegítség megjelenítése" << std::endl;
 }
 
 int
