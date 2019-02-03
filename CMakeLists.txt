@@ -20,5 +20,3 @@ add_executable(pizza Main.cpp Pizza.cpp)
 # We need to link gflags to our executable
 target_link_libraries(pizza
 	gflags)
-
-# Put binary to bin/
