@@ -1,6 +1,22 @@
 /*
 
-  _____ _
+
+               _,--~~    ~~--._
+            ,/'  m%%%%%%=@%%m  `\.
+           /' m%%o(_)%%o%%%%o%%m `\
+         /' %%@=%o%%%o%%%o%(_)o%%% `\
+        /  %o%%%%%=@%%%(_)%%o%%@=%%  \
+       |  (_)%(_)%%o%%%o%%%%=@(_)%%%  |
+       | %%o%%%%o%%%(_)%%o%%o%%%%o%%% |
+       | %%o%(_)%%%%%o%(_)%%%o%%o%o%% |
+       |  (_)%%=@%(_)%o%o%%(_)%o(_)%  |
+        \ ~%%o%%%%%o%o%=@%%o%%@%%o%~ /
+         \. ~o%%(_)%%%o%(_)%%(_)o~ ,/
+           \_ ~o%=@%(_)%o%%(_)%~ _/
+             `\_~~o%%%o%%%%%~~_/'
+                `--..____,,--'
+
+   _____ _
  |  __ (_)
  | |__) | __________ _
  |  ___/ |_  /_  / _` |
@@ -24,11 +40,16 @@
 
 #include "Pizza.h"
 
+#define DEFAULT_N_OF_PIZZAS 10
+
 DEFINE_bool(a, false, "Kilistázza az összes ajánlatot");
 DEFINE_bool(h, false, "Használat mutatása");
 DEFINE_int32(c, 0, "A legjobb N db pizza");
 
-void usage();
+void
+usage() {
+	std::cout << "Használat: ./pizza [-h(elp) -a(ll) -c(ount) [szám]]" << std::endl;
+}
 
 int
 main(int argc, char **argv) {
@@ -38,10 +59,10 @@ main(int argc, char **argv) {
 	gflags::ParseCommandLineFlags(&argc, &argv, true);
 	gflags::ParseCommandLineNonHelpFlags(&argc, &argv, true);
 
-	if(FLAGS_h) { usage(); }
+	if(FLAGS_h || FLAGS_c && FLAGS_a) { usage(); exit(0);}
 
 	std::ifstream ifs("pizza.txt");
-	std::vector<Pizza> pizzak;
+	std::vector<Pizza> pizzas;
 
 	int diameter, price;
 	std::string name, vendor, textline;
@@ -65,16 +86,16 @@ main(int argc, char **argv) {
 		// nézünk, nem a vesszőig
 		getline(text_stream, name, '\n');
 
-		// a pizzak vektort használva konstruáltatjuk meg az elemeket
-		pizzak.emplace_back(price, diameter, vendor, name);
+		// a pizzas vektort használva konstruáltatjuk meg az elemeket
+		pizzas.emplace_back(price, diameter, vendor, name);
 	}
 
 	// Rendezzük sorba a pizzákat (jelenleg egységáraik szerint)
-	std::sort(pizzak.begin(), pizzak.end());
+	std::sort(pizzas.begin(), pizzas.end());
 
 	// Ha a -a zászlót kaptuk, akkor mindent ki kell listázzunk
 	if(FLAGS_a) {
-		for(Pizza &p : pizzak) {
+		for(Pizza &p : pizzas) {
 			std::cout << p;
 		}
 	}
@@ -82,10 +103,10 @@ main(int argc, char **argv) {
 	// Ha a -c [szám] zászlót kaptuk, akkor csak a legjobb FLAGS_c darabot listázzuk,
 	// már ha van annyi összesen.
 	else if(FLAGS_c > 0) {
-		if(FLAGS_c <= pizzak.size()) {
+		if(FLAGS_c <= pizzas.size()) {
 			std::cout << "A legjobb " << FLAGS_c << " pizza a következő(ek): " << std::endl;
 			for(int i=0; i < FLAGS_c; i++) {
-				std::cout << i+1 << ". " << pizzak[i];
+				std::cout << i+1 << ". " << pizzas[i];
 			}
 		} else {
 			std::cout << "Nincsen ennyi ajánlat összesen." << std::endl;
@@ -93,11 +114,11 @@ main(int argc, char **argv) {
 	}
 
 	else {
-		std::cout << "A legjobb 5 pizza: " << std::endl;
-		for(int i=0; i < 5; i++) {
+		std::cout << "A legjobb " << DEFAULT_N_OF_PIZZAS <<  " pizza: " << std::endl;
+		for(int i=0; i < DEFAULT_N_OF_PIZZAS; i++) {
 			// csak akkor írjuk ki ha létezik az az elem egyáltalán...
-			if(i <= pizzak.size()) {
-				std::cout << "\t" << i+1 << ". " << pizzak[i];
+			if(i < pizzas.size()) {
+				std::cout << "\t" << i+1 << ". " << pizzas[i];
 			}
 		}
 		std::cout << std::endl << std::endl << "Egyéb segítség: ./pizza -h" << std::endl;
@@ -110,7 +131,4 @@ main(int argc, char **argv) {
     }
 }
 
-void
-usage() {
-	std::cout << "Használat: ./pizza -h | vagy -a | vagy -c [szám]" << std::endl;
-}
+
