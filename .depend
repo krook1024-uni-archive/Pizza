@@ -1,2 +1,0 @@
-Pizza.o: Pizza.cpp Pizza.h
-main.o: main.cpp Pizza.h

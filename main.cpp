@@ -25,7 +25,18 @@
 
 void usage();
 
-int main(int argc, char **argv) try {
+int
+main(int argc, char **argv) {
+	try {
+	
+	// kapcsolók feldolgozása
+	// TODO
+	
+
+
+
+
+
 	std::ifstream ifs("pizza.txt");
 	std::vector<Pizza> pizzak;
 
@@ -59,7 +70,33 @@ int main(int argc, char **argv) try {
 	std::sort(pizzak.begin(), pizzak.end());
 
 	// egy, vagy kettő bemenet érkezett?
-	if(argc == 2 | argc == 3) {
+
+	/*GetOpt getopt(argc, argv, "ahc:");
+	int option_char, pizza_count;
+
+	while((option_char = getopt()) != EOF) {
+		switch(option_char) {
+			case 'a':
+				for(Pizza &p : pizzak) {
+					std::cout << p;
+				}
+				break;
+			
+			case 'c':
+				pizza_count = atoi(getopt.optarg);
+				std::cout << "A legjobb " << pizza_count << " pizza a következő(k):" << std::endl;
+				for(int i=0; i < pizza_count; i++) {
+					std::cout << pizzak[i];
+				}
+				break;
+
+			case 'h': usage(); break;
+			case '?': usage(); break;
+		}
+	}*/
+
+
+	/*if(argc == 2 | argc == 3) {
 		// jegyezzük meg a kapcsolót
 		char *option = *++argv;
 
@@ -70,7 +107,7 @@ int main(int argc, char **argv) try {
 			}
 		}
 
-		else if(option[1] == 'h') {
+		else if(option[1] == 'h') { // vagy a -h kapcsoló?
 			usage();
 		}
 
@@ -101,14 +138,16 @@ int main(int argc, char **argv) try {
 	else if(argc == 1) {
 		std::cout << "A legjobban ez a pizza éri meg jelenleg:" << std::endl;
 		std::cout << pizzak[0];
-	}
+	}*/
 
 	return 0;
-} catch (std::ios::failure& e) {
-        std::cout << "Hiba történt: ";
-        std::cout << e.what() << std::endl;
+
+	} catch(...) {
+        std::cerr << "Ismeretlen hiba történt!" << std::endl;
+    }
 }
 
-void usage() {
+void
+usage() {
 	std::cout << "Használat: ./pizza -h | vagy -a | vagy -c [szám]" << std::endl;
 }
