@@ -1,6 +1,6 @@
 # 🍕 Pizza
 
-## 🍕 Compile
+### 🍕 Compile
 
 ```
 mkdir build && cd build
