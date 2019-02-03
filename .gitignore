@@ -36,3 +36,7 @@ pizza
 # Other
 *vscode*
 
+# CMake
+build
+build/*
+
