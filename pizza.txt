@@ -3,7 +3,7 @@
 28,1390,Gino,Ínyenc
 28,1360,Gino,Apollo
 28,1290,Gino,Olíva
-28,1240,Gino,Guliver
+28,1280,Gino,Guliver
 28,970,Gino,Margaréta
 28,970,Gino,Kukori
 28,1090,Gino,Sonkás
@@ -21,7 +21,7 @@
 28,1220,Gino,Csilis
 28,1290,Gino,Pedro
 28,1230,Gino,Bolognai
-28,1240,Gino,Tarjás
+28,1280,Gino,Tarjás
 28,1310,Gino,Füstös
 28,1180,Gino,Son.go.han
 28,1160,Gino,Son.go.ku
@@ -31,8 +31,8 @@
 28,1210,Gino,Sajtimádó
 28,1220,Gino,Berlin
 28,1180,Gino,Casino
-28,1240,Gino,Négy évszak
-28,1240,Gino,Gino
+28,1280,Gino,Négy évszak
+28,1280,Gino,Gino
 28,1470,Gino,Yo Neked
 28,1270,Gino,Gyrosos
 28,1370,Gino,Donna Maria
@@ -69,13 +69,13 @@
 45,2270,Gino,Sonkás
 45,2320,Gino,Szalámis
 45,2320,Gino,Gombás
-45,2470,Gino,Sonkás-Szalámis
-45,2430,Gino,Sonkás-Gombás
-45,2430,Gino,Sonkás-Kukoricás
-45,2450,Gino,Trópusi vihar
-45,2420,Gino,Kerti zöldséges
+45,2870,Gino,Sonkás-Szalámis
+45,2830,Gino,Sonkás-Gombás
+45,2830,Gino,Sonkás-Kukoricás
+45,2850,Gino,Trópusi vihar
+45,2820,Gino,Kerti zöldséges
 45,2540,Gino,Magyaros
-45,2490,Gino,Major
+45,2890,Gino,Major
 45,2750,Gino,Texas Holdem
 45,2540,Gino,Kocsis
 45,2540,Gino,Csilis
@@ -83,14 +83,14 @@
 45,2590,Gino,Bolognai
 45,2650,Gino,Tarjás
 45,2750,Gino,Füstös
-45,2470,Gino,Son.go.han
-45,2470,Gino,Son.go.ku
-45,2450,Gino,Hawaii
+45,2870,Gino,Son.go.han
+45,2870,Gino,Son.go.ku
+45,2850,Gino,Hawaii
 45,2640,Gino,Brassói
 45,2550,Gino,Pepperóni
 45,2550,Gino,Sajtimádó
 45,2550,Gino,Berlin
-45,2470,Gino,Casino
+45,2870,Gino,Casino
 45,2650,Gino,Négy évszak
 45,2650,Gino,Gino
 45,3090,Gino,Yo Neked
@@ -101,10 +101,10 @@
 45,2990,Gino,Csípős pizza
 45,2590,Gino,Parasztos
 45,2540,Gino,Sárkány
-45,2450,Gino,Kalória
+45,2850,Gino,Kalória
 45,2690,Gino,Török
-45,2450,Gino,Don Papa
-45,2450,Gino,Vegetáriánus
+45,2850,Gino,Don Papa
+45,2850,Gino,Vegetáriánus
 45,2540,Gino,Fokhagymás-tejfölös
 45,2720,Gino,Bud Spencer
 45,2690,Gino,Boss
@@ -118,41 +118,41 @@
 45,2890,Gino,Vámpír
 45,2890,Gino,Keresztapa
 45,2790,Gino,Zeusz
-24,890,Pecsi,Margaréta
-24,890,Pecsi,Sonkás
-24,890,Pecsi,Szalámis
-24,990,Pecsi,Sonkás-Gombás
-24,990,Pecsi,Sonkás-Szalámis
-24,990,Pecsi,Sonkás-Kukoricás
-24,990,Pecsi,Son-Go-Ku
-24,990,Pecsi,Kölyök
-24,990,Pecsi,Vili
-24,990,Pecsi,Hawaii
-24,1090,Pecsi,Magyaros
-24,1150,Pecsi,Bolognai
-24,1150,Pecsi,Vega
-24,1250,Pecsi,Italya
-24,1390,Pecsi,Hajdú
-24,1390,Pecsi,Huszár
-24,1150,Pecsi,Mexikói
-24,1390,Pecsi,Pásztor
-24,1250,Pecsi,Pékné
-24,1390,Pecsi,Húsimádó
-24,1150,Pecsi,Kertész
-24,1250,Pecsi,BBQ
-24,1150,Pecsi,Miszisz
-24,1390,Pecsi,Görög
-24,1150,Pecsi,Miszter
-24,1250,Pecsi,Al Capone
-24,1390,Pecsi,Gyrosos
-24,1490,Pecsi,Pecsenyés
-24,1190,Pecsi,Böszörményi
-24,1390,Pecsi,Chuck Norris
-24,1290,Pecsi,Vezúv
-24,1290,Pecsi,Iván
-24,1290,Pecsi,Piedone
-24,1150,Pecsi,Batman
-24,1090,Pecsi,Spárta
-24,1090,Pecsi,Halas
-24,1490,Pecsi,Kívánság
-24,1490,Pecsi,Fele-fele
+28,890,Pecsi,Margaréta
+28,890,Pecsi,Sonkás
+28,890,Pecsi,Szalámis
+28,990,Pecsi,Sonkás-Gombás
+28,990,Pecsi,Sonkás-Szalámis
+28,990,Pecsi,Sonkás-Kukoricás
+28,990,Pecsi,Son-Go-Ku
+28,990,Pecsi,Kölyök
+28,990,Pecsi,Vili
+28,990,Pecsi,Hawaii
+28,1090,Pecsi,Magyaros
+28,1150,Pecsi,Bolognai
+28,1150,Pecsi,Vega
+28,1250,Pecsi,Italya
+28,1390,Pecsi,Hajdú
+28,1390,Pecsi,Huszár
+28,1150,Pecsi,Mexikói
+28,1390,Pecsi,Pásztor
+28,1250,Pecsi,Pékné
+28,1390,Pecsi,Húsimádó
+28,1150,Pecsi,Kertész
+28,1250,Pecsi,BBQ
+28,1150,Pecsi,Miszisz
+28,1390,Pecsi,Görög
+28,1150,Pecsi,Miszter
+28,1250,Pecsi,Al Capone
+28,1390,Pecsi,Gyrosos
+28,1490,Pecsi,Pecsenyés
+28,1190,Pecsi,Böszörményi
+28,1390,Pecsi,Chuck Norris
+28,1290,Pecsi,Vezúv
+28,1290,Pecsi,Iván
+28,1290,Pecsi,Piedone
+28,1150,Pecsi,Batman
+28,1090,Pecsi,Spárta
+28,1090,Pecsi,Halas
+28,1490,Pecsi,Kívánság
+28,1490,Pecsi,Fele-fele
