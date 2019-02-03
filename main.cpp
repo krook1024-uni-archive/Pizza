@@ -61,20 +61,20 @@ int main(int argc, char **argv) try {
 	// egy, vagy kettő bemenet érkezett?
 	if(argc == 2 | argc == 3) {
 		// jegyezzük meg a kapcsolót
-		char *kapcsolo = *++argv;
+		char *option = *++argv;
 
-		if (kapcsolo[1] == 'a') { // a -a kapcsoló jön?
+		if (option[1] == 'a') { // a -a kapcsoló jön?
 			// Kiírjuk az összes pizza adatait
 			for(Pizza &p : pizzak) {
 				std::cout << p;
 			}
 		}
 
-		else if(kapcsolo[1] == 'h') {
+		else if(option[1] == 'h') {
 			usage();
 		}
 
-		else if(kapcsolo[1] == 'c') {
+		else if(option[1] == 'c') {
 			// TODO: segmentation fault lesz ebbű
 			int count = atoi(*++argv);
 			if(count > 0) {
