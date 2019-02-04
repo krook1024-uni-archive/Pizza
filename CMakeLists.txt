@@ -14,9 +14,17 @@ project(pizza)
 hunter_add_package(gflags)
 find_package(gflags CONFIG REQUIRED)
 
+# Add gtkmm
+#find_package(PkgConfig)
+#pkg_check_modules(GTKMM gtkmm-3.0)
+
 # Source files for `pizza` are currently `Main.cpp and `Pizza.cpp`
 add_executable(pizza Main.cpp Pizza.cpp)
+
+#include_directories(
+#    ${GTKMM_INCLUDE_DIRS}  )
 
 # We need to link gflags to our executable
 target_link_libraries(pizza
 	gflags)
+	#	${GTKMM_LIBRARIES})

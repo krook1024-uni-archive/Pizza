@@ -58,11 +58,9 @@ int
 main(int argc, char **argv) {
 	try {
 
-	gflags::SetUsageMessage("Használat: ");
-	gflags::ParseCommandLineFlags(&argc, &argv, true);
-	gflags::ParseCommandLineNonHelpFlags(&argc, &argv, true);
-
-	if(FLAGS_h || FLAGS_c && FLAGS_a) { usage(); exit(0);}
+	if(FLAGS_h || FLAGS_c && FLAGS_a) {
+	    usage(); exit(0);
+	}
 
 	std::ifstream ifs("pizza.txt");
 	std::vector<Pizza> pizzas;
