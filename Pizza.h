@@ -3,9 +3,9 @@
 
 class Pizza {
 public:
-    Pizza(int price, int diameter, std::string vendor, std::string name);
+	Pizza(int price, int diameter, std::string vendor, std::string name);
 	friend std::ostream& operator<< (std::ostream& stream, const Pizza& obj);
-    bool operator< (Pizza i);
+	bool operator< (Pizza i);
 private:
 	int price, diameter;
 	double area, unitprice;
