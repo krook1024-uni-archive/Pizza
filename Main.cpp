@@ -58,6 +58,10 @@ int
 main(int argc, char **argv) {
 	try {
 
+	gflags::SetUsageMessage("Használat: ");
+	gflags::ParseCommandLineFlags(&argc, &argv, true);
+	gflags::ParseCommandLineNonHelpFlags(&argc, &argv, true);
+
 	if(FLAGS_h || FLAGS_c && FLAGS_a) {
 	    usage(); exit(0);
 	}
@@ -96,15 +100,19 @@ main(int argc, char **argv) {
 
 	// Ha a -a zászlót kaptuk, akkor mindent ki kell listázzunk
 	if(FLAGS_a) {
+		std::cout << "Jelenleg " << pizzas.size() << " ajánlatot tárolunk." << std::endl;
 		for(Pizza &p : pizzas) {
 			std::cout << p;
 		}
+
+		exit(0);
 	}
 
 	// Ha a -c [szám] zászlót kaptuk, akkor csak a legjobb FLAGS_c darabot listázzuk,
 	// már ha van annyi összesen.
-	else if(FLAGS_c > 0) {
+	if(FLAGS_c > 0) {
 		if(FLAGS_c <= pizzas.size()) {
+			std::cout << "Jelenleg " << pizzas.size() << " ajánlatot tárolunk." << std::endl;
 			std::cout << "A legjobb " << FLAGS_c << " pizza a következő(ek): " << std::endl;
 			for(int i=0; i < FLAGS_c; i++) {
 				std::cout << i+1 << ". " << pizzas[i];
@@ -112,18 +120,19 @@ main(int argc, char **argv) {
 		} else {
 			std::cout << "Nincsen ennyi ajánlat összesen." << std::endl;
 		}
+
+		exit(0);
 	}
 
-	else {
-		std::cout << "A legjobb " << DEFAULT_N_OF_PIZZAS <<  " pizza: " << std::endl;
-		for(int i=0; i < DEFAULT_N_OF_PIZZAS; i++) {
-			// csak akkor írjuk ki ha létezik az az elem egyáltalán...
-			if(i < pizzas.size()) {
-				std::cout << "\t" << i+1 << ". " << pizzas[i];
-			}
+	std::cout << "Jelenleg " << pizzas.size() << " ajánlatot tárolunk." << std::endl;
+	std::cout << "A legjobb " << DEFAULT_N_OF_PIZZAS <<  " pizza: " << std::endl;
+	for(int i=0; i < DEFAULT_N_OF_PIZZAS; i++) {
+		// csak akkor írjuk ki ha létezik az az elem egyáltalán...
+		if(i < pizzas.size()) {
+			std::cout << "\t" << i+1 << ". " << pizzas[i];
 		}
-		std::cout << std::endl << std::endl << "Egyéb segítség: ./pizza -h" << std::endl;
 	}
+	std::cout << std::endl << std::endl << "Egyéb segítség: ./pizza -h" << std::endl;
 
 	return 0;
 
@@ -131,5 +140,3 @@ main(int argc, char **argv) {
         std::cerr << "Ismeretlen hiba történt!" << std::endl;
     }
 }
-
-
